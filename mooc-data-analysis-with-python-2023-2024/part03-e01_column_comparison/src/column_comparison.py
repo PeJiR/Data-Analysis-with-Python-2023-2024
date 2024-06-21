@@ -2,14 +2,26 @@
 
 import numpy as np
 
-import pandas as pd
-a=pd.read_csv("https://raw.githubusercontent.com/csmastersUH/data_analysis_with_python_2020/master/kumpula-weather-2017.csv")['Air temperature (degC)'].values
-
 def column_comparison(a):
+    return a[a:,1] > a[:, -2]
+    
+    
     return np.array([])
     
 def main():
-    pass
+    
+    a = np.array(
+        [
+            [8, 9, 3, 8, 8],
+            [0, 5, 3, 9, 9],
+            [5, 7, 6, 0, 4],
+            [7, 8, 1, 6, 2],
+            [2, 1, 3, 5, 8],                             
+            
+        ]
+    )
+    print(column_comparison(a))
+   
 
 if __name__ == "__main__":
     main()
